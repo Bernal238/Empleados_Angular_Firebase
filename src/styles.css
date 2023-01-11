@@ -1,1 +1,116 @@
+
+
 /* You can add global styles to this file, and also import other style files */
+/* @import '/src/assets/tema/tema.scss'; */
+/* @import "~bootstrap/scss/bootstrap"; */
+/* @import '~ngx-sharebuttons/themes/default'; */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+
+html,
+body {
+    height: 100%;
+    background: #f7f7f7;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.titulo {
+    font-family: 'Staatliches', sans-serif !important;
+    font-size: 18px;
+}
+
+.subtitulo {
+    font-family: 'Staatliches', sans-serif !important;
+    font-size: 14px;
+}
+
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 1px 1px 0 rgb(148, 148, 148), ;
+    margin: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+/* .background {
+    background: url(assets/images/fondoLogin.png) no-repeat center center fixed;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+} */
+
+.mat-paginator-icon {
+    color: white !important;
+}
+
+.mat-select-arrow {
+    color: white !important;
+}
+
+.mat-paginator {
+    background: #171717;
+    color: #F3F3F3;
+}
+
+.mat-paginator .mat-select-value-text {
+    color: white !important;
+}
+
+.mat-dialog-container {
+    padding-top: 0 !important;
+}
+
+.snackbar {
+    background-color: #484848;
+    color: white;
+    border-left: 10px solid red;
+}
+
+.inputFileSeleccionado {
+    border-left: 10px solid rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.inputFileNoSeleccionado {
+    border-left: 10px solid rgb(255, 127, 127);
+}
+
+/* // .mat-chip-list-wrapper {
+//   display: flex;
+//   flex-direction: column-reverse !important;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   margin: -4px;
+// } */
+
+/* Animacion de spin al refrescar */
+.spin {
+    animation: infinite rotate 1s cubic-bezier(.79, .14, .15, .86) 0s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
