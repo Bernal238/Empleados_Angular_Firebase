@@ -1,0 +1,13 @@
+.background {
+  background: url(.././../../assets/images/74544.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login {
+  text-align: center;
+  width: 390px;
+  margin: auto;
+  margin-top: 10px;
+}

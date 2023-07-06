@@ -1,0 +1,44 @@
+<mat-toolbar style="background-color: #292929;" class="app-toolbar navbar navbar-expand-lg">
+    <mat-toolbar-row>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div style="text-align: start; float: left;">
+              <a href="/inicio">
+                <img _ngcontent-bhc-c233="" src="../../assets/images/bomberosleon.png" width="40em" height="40em" class="d-inline-block align-middle mr-2" style="margin-right: 0.5em;" >
+              </a>
+              <span class="titulo-proyecto" style="color: white; vertical-align: middle;">CONTROL Y GESTIÓN DE BITACORAS</span>
+            </div>
+
+            <div style="text-align: end; float: right;">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon style="color: white;">account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="inicio()">
+                <mat-icon>home</mat-icon>
+                <span>Inicio</span>
+              </button>
+              <button mat-menu-item (click)="administrarUsuarios()">
+                <mat-icon>admin_panel_settings</mat-icon>
+                <span>Administrar usuarios</span>
+              </button>
+              <button mat-menu-item (click)="cerrarSesion()">
+                <mat-icon>logout</mat-icon>
+                <span>Cerrar sesión</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div style="text-align: end; float: right; color: white;" class="info-usuario">
+            <div class="row container" style="text-align: end !important; padding-top: 12px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
+              <span style="line-height: 10px !important; font-size: 10px; padding: 0;">{{nombreCompleto}}</span>
+              <span style="line-height: 10px !important; font-size: 10px; padding: 0;">{{puesto}}</span>
+              <span style="line-height: 10px !important; font-size: 10px; padding: 0; font-weight:lighter;">{{fecha}}</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+

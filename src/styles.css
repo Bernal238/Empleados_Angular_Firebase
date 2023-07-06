@@ -1,14 +1,13 @@
 
-
 /* You can add global styles to this file, and also import other style files */
-/* @import '/src/assets/tema/tema.scss'; */
-/* @import "~bootstrap/scss/bootstrap"; */
-/* @import '~ngx-sharebuttons/themes/default'; */
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+/* @import "~bootstrap/scss/bootstrap"; */
+/* @import '/src/assets/tema/tema.scss'; */
 
-
-
-html,
+html,body {
+  height: 100%;
+  background: #f7f7f7;
+}
 body {
     height: 100%;
     background: #f7f7f7;
@@ -114,3 +113,5 @@ body {
         transform: rotate(0deg);
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

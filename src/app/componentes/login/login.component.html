@@ -1,0 +1,39 @@
+<router-outlet></router-outlet>
+<div class="container-fluid background">
+  <div class="row justify-content-center">
+    <mat-card class="login">
+      <img src="../../../assets/images/bomberosleon.png" alt="logo" style="height: 250px; margin-top: 20%;">
+      <div>
+        <form [formGroup]="frmLogin">
+          <br>
+          <mat-form-field class="example-form-field container-fluid" style="margin-top: 10%;">
+            <mat-label>Usuario</mat-label>
+            <input formControlName="idUsuario" matInput type="text">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-form-field container-fluid" style="margin-top: 3%;">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="contrasenia" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <br>
+          <div style="margin-top: 3%;">
+            <a routerLink="registrarme">¿No tienes una cuenta?</a>
+            <!-- <a routerLink="registrarme">Registrarme</a> -->
+          </div>
+          <div style="margin-top: 3%;">
+            <a routerLink="">Olvidé mi contraseña</a>
+          </div>
+        </form>
+        <div>
+          <hr>
+          <button mat-flat-button class="container-fluid" color="accent" [disabled]="frmLogin.invalid" (click)="loguearUsuario()">Ingresar</button>
+          <hr>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

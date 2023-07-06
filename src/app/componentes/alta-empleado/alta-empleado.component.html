@@ -1,0 +1,69 @@
+<div class="mat-dialog-title" style="background: red; margin-bottom: 30px;">
+  <h3 mat-dialog-title class="titulo" style="
+          color: white;
+          margin-top: 0px;
+          padding-left: 20px;
+          font-size: 22px !important;
+          text-align: center;
+        ">
+        AGREGAR EMPELADO
+        <mat-icon class="mat-18">playlist_add</mat-icon>
+  </h3>
+</div>
+<!--  -->
+<!-- <div class="container">
+  <div class="row"> -->
+    <div mat-dialog-content class="tamañoSolicitud" style="height: 440px;">
+      <div class="container">
+        <form [formGroup]="frmModal" style="display: contents; align-items: center; justify-content: center">
+          <mat-form-field style="display: contents">
+            <mat-label>Nomina</mat-label>
+            <input matInput type="number" placeholder="Ingrese el número de nomina" formControlName="nomina" min="1" pattern="^[0-9]+" autocomplete="off" required />
+          </mat-form-field>
+          <mat-form-field style="display: contents">
+            <mat-label>Nombre(s)</mat-label>
+            <input matInput placeholder="Ingrese los nombres" formControlName="nombres" autocomplete="off" required />
+          </mat-form-field>
+          <mat-form-field style="display: contents">
+            <mat-label>Apellido paterno</mat-label>
+            <input matInput placeholder="Ingrese apellido paterno" formControlName="apellidoPaterno" autocomplete="off"
+              required />
+          </mat-form-field>
+          <mat-form-field style="display: contents">
+            <mat-label>Apellido materno</mat-label>
+            <input matInput placeholder="Ingrese apellido materno" formControlName="apellidoMaterno" autocomplete="off"
+              required />
+          </mat-form-field>
+          <!-- <div class="container"> -->
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field style="display: contents">
+                  <mat-label>Puesto</mat-label>
+                  <mat-select name="puesto" formControlName="idPuesto" required>
+                      <mat-option *ngFor="let puesto of arregloPuestos" [value]="puesto.idPuesto">{{puesto.nombrePuesto}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6">
+                <mat-form-field style="display: contents">
+                  <mat-label>Turno</mat-label>
+                  <mat-select name="turno" formControlName="idTurno" required>
+                      <mat-option *ngFor="let turno of arregloTurnos" [value]="turno.idTurno">{{turno.nombreTurno}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+              </div>
+            <!-- </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  <!-- </div>
+</div>
+<br /> -->
+
+<div class="footer" mat-dialog-actions align="end" style="margin-right: 30px;;">
+  <button mat-flat-button mat-dialog-close>CANCELAR</button>
+  <button mat-flat-button color="warn" [disabled]="frmModal.invalid" (click)="agregarEmpleado()">
+    REGISTRAR
+  </button>
+</div>

@@ -1,0 +1,47 @@
+<router-outlet></router-outlet>
+<div class="container-fluid background">
+  <div class="row justify-content-center">
+    <mat-card class="login">
+      <img src="../../../assets/images/bomberosleon.png" alt="logo" style="height: 250px; margin-top: 20%;">
+      <div>
+        <form [formGroup]="frmRegistro">
+          <br>
+          <mat-form-field class="example-form-field container-fluid" style="margin-top: 10%;">
+            <mat-label>Usuario</mat-label>
+            <input formControlName="idUsuario" matInput type="text">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-form-field container-fluid" style="margin-top: 3%;">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="contrasenia" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field class="example-form-field container-fluid" style="margin-top: 3%;">
+            <mat-label>Confirma Contraseña</mat-label>
+            <input formControlName="contraseniaConfirma" matInput [type]="hideConfirma ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hideConfirma = !hideConfirma" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hideConfirma">
+              <mat-icon>{{hideConfirma ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <br>
+          <div style="margin-top: 3%;">
+            <a routerLink="login">Iniciar Sesion</a>
+            <!-- <a routerLink="registrarme">Registrarme</a> -->
+          </div>
+          <div style="margin-top: 3%;">
+            <a routerLink="">Olvidé mi contraseña</a>
+          </div>
+        </form>
+        <div>
+          <hr>
+          <button mat-flat-button class="container-fluid" color="accent" [disabled]="frmRegistro.invalid" (click)="registrar()">Registrar</button>
+          <hr>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

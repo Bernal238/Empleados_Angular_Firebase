@@ -1,0 +1,185 @@
+<div class="mat-dialog-title" style="background: red;">
+  <h3 mat-dialog-title class="titulo" style="
+      color: white;
+      margin-top: 0px;
+      padding-left: 20px;
+      font-size: 22px !important;
+      text-align:center
+    ">
+    ASIGNAR PRIVILEGIOS
+    <mat-icon class="mat-18">admin_panel_settings</mat-icon>
+    <!-- <mat-icon [mat-dialog-close]="" aria-hidden="false"
+      style="text-align: end; float: right; color: white; vertical-align: text-top;">close</mat-icon> -->
+  </h3>
+</div>
+
+<!-- DATOS DEL USUARIO -->
+<div mat-dialog-content style="height: 440px;" >
+  <div class="container">
+    <div class="col-md-12">
+      <p style="font-size: 12px; margin-bottom: 20px; text-align: center;">
+        <span class="titulo" style="color: black">DATOS USUARIO</span>
+      </p>
+    </div>
+  </div>
+  <!-- CONTENEDOR DE DATOS -->
+  <div class="container">
+    <div class="row">
+      <!-- DATOS -->
+      <div class="col-md-6" style="padding: 10px;">
+        <p style="font-size: 12px; margin-bottom: 0px;">
+          <span style="margin-bottom: 0px">ID: </span>
+            {{ data.id_usuario }}
+        </p>
+        <p style="font-size: 12px; margin-bottom: 0px">
+          <span style="margin-bottom: 0px">NOMBRE: </span>
+            {{ data.nombre_completo }}
+        </p>
+        <p style="font-size: 12px; margin-bottom: 0px">
+          <span style="margin-bottom: 0px">PUESTO: </span>
+            {{ data.nombre_puesto }}
+        </p>
+        <p style="font-size: 12px; margin-bottom: 0px">
+          <span style="margin-bottom: 0px">TURNO: </span>
+            {{ data.nombre_turno }}
+        </p>
+      </div>
+      <!-- IMAGEN -->
+      <div class="col-md-6" style="padding: 10px;">
+        <mat-icon class="mat-6">admin_panel_settings</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENEDOR DE PRIVILEGIOS -->
+  <div class="container">
+    <div class="row">
+      <mat-accordion class="example-headers-align w-100">
+        <mat-expansion-panel style="align-items: center;">
+          <mat-expansion-panel-header style="height: 50px; background-color: #383838">
+          <mat-panel-title style="color: white; font-size: 17px;"> Privilegios SGB</mat-panel-title>
+          <mat-panel-description>
+            <mat-icon class="item">shield</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="row" style="padding-left: 40px; padding-right: 40px">
+          <table class="table-responsive mt-3 tableFixHead" style="text-align: center; margin: 0 auto;">
+            <thead class="thead-dark" style="background-color: #222222; color:#ffffff">
+              <tr>
+                <th>Modulo</th>
+                <th>Acceso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>REGISTRO EMPLEADOS</td>
+                <mat-checkbox color="acent"></mat-checkbox>
+              </tr>
+              <tr>
+                <td>REGISTRO UNIDADES</td>
+                <mat-checkbox color="acent"></mat-checkbox>
+              </tr>
+              <tr>
+                <td>REGISTRO COMBUSTIBLE</td>
+                <mat-checkbox color="acent"></mat-checkbox>
+              </tr>
+              <tr>
+                <td>REGISTRO FOLIO</td>
+                <mat-checkbox color="acent"></mat-checkbox>
+              </tr>
+              <tr>
+                <td>USUARIOS</td>
+                <mat-checkbox color="acent"></mat-checkbox>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+  </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <p style="font-size: 12px; margin-bottom: 20px; text-align: center">
+          <span class="titulo" style="color: black">DATOS USUARIO</span>
+        </p>
+        <div mat-dialog-content>
+          <section>
+            <p style="font-size: 12px; margin-bottom: 0px">
+              <span style="margin-bottom: 0px">ID: </span>
+              {{ data.id_usuario }}
+            </p>
+            <p style="font-size: 12px; margin-bottom: 0px">
+              <span style="margin-bottom: 0px">NOMBRE: </span>
+              {{ data.nombre_completo }}
+            </p>
+            <p style="font-size: 12px; margin-bottom: 0px">
+              <span style="margin-bottom: 0px">PUESTO: </span>
+              {{ data.nombre_puesto }}
+            </p>
+            <p style="font-size: 12px; margin-bottom: 0px">
+              <span style="margin-bottom: 0px">TURNO: </span>
+              {{ data.nombre_turno }}
+            </p>
+          </section>
+        </div>
+      </div>
+    </div> -->
+  <!-- <div mat-dialog-content> -->
+  <!-- <mat-accordion class="example-headers-align w-100">
+    <mat-expansion-panel style="align-items: center;">
+      <mat-expansion-panel-header style="height: 50px; background-color: #383838">
+        <mat-panel-title style="color: white; font-size: 17px;"> Privilegios SGB</mat-panel-title>
+        <mat-panel-description>
+          <mat-icon class="item">shield</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="row">
+        <table class="table-responsive mt-3 tableFixHead" style="text-align: center; width: 300px; margin: 0 auto;">
+          <thead class="thead-dark" style="background-color: #222222; color:#ffffff">
+            <tr>
+              <th>Modulo</th>
+              <th>Acceso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>REGISTRO EMPLEADOS</td>
+              <mat-checkbox color="acent"></mat-checkbox>
+            </tr>
+            <tr>
+              <td>REGISTRO UNIDADES</td>
+              <mat-checkbox color="acent"></mat-checkbox>
+            </tr>
+            <tr>
+              <td>REGISTRO COMBUSTIBLE</td>
+              <mat-checkbox color="acent"></mat-checkbox>
+            </tr>
+            <tr>
+              <td>REGISTRO FOLIO</td>
+              <mat-checkbox color="acent"></mat-checkbox>
+            </tr>
+            <tr>
+              <td>USUARIOS</td>
+              <mat-checkbox color="acent"></mat-checkbox>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footer" mat-dialog-content>
+        <button mat-flat-button color="warn" style="width: 100%;">
+          Asignar privilegios
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion> -->
+  <!-- </div> -->
+
+</div>
+
+
+<div class="footer" mat-dialog-actions align="end" style="margin-right: 30px;">
+  <button mat-flat-button mat-dialog-close>CANCELAR</button>
+  <button mat-flat-button color="warn">GUARDAR</button>
+</div>

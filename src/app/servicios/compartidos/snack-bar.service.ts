@@ -6,7 +6,7 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 })
 export class SnackBarService {
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
+  horizontalPosition: MatSnackBarHorizontalPosition= 'right';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(private _snackBar: MatSnackBar) { }
@@ -17,7 +17,7 @@ export class SnackBarService {
 * @param: {action}: string
 * @returns void
 * @memberof: Components
-* @author: Fernando Martínez - 30/09/2021
+* @author: JMHB - 30/09/2021
 */
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {

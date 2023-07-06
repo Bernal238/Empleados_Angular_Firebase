@@ -1,0 +1,13 @@
+.titulo {
+  color: white;
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 22px !important;
+  text-align: center;
+}
+
+.formulario {
+  display: contents;
+  align-items: center;
+  justify-content: center
+}

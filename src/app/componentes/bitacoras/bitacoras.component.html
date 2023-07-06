@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+  <div class="col" style="text-align:center; margin-top: 10px">
+    <h1 style="font-family: Staatliches,sans-serif!important;">ADMINISTRACIÓN DE BITÁCORAS</h1>
+  </div>
+  <mat-card class="cardAcciones" style="margin-top:40px;">
+    <div class="row" style="align-items: center;">
+      <div class="col-md-2">
+        <!-- BOTON PARA AGREGAR UNA BITACORA -->
+        <button matTooltip="Agregar bitacora" mat-mini-fab color="warn" aria-label="" class="my-fab" (click)="modalCrearFolio()">
+          <mat-icon aria-hidden="false" class="mat-icon">
+            add
+          </mat-icon>
+        </button>
+        <!-- BOTON PARA ACTUALIZAR LA TABLA -->
+        <button matTooltip="Refrescar" mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" class="my-fab">
+          <mat-icon class="mat-icon">
+            refresh
+          </mat-icon>
+        </button>
+        <!--BOTON PARA MOSTRAR LOS DETALLES-->
+        <button matTooltip="Ver Historial" mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" class="my-fab">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="mat-icon">
+            pending_actions
+          </mat-icon>
+        </button>
+      </div>
+      <div class="col-md-3 busqueda">
+        <h1>Busqueda</h1>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <mat-card class="cardAcciones" style="height:600px">
+        <mat-tab-group dynamicHeight>
+        <mat-tab label="Finalizados">
+          <div class="example-small-box mat-elevation-z4">
+            <mat-card class="carAcciones" >
+            </mat-card>
+          </div>
+        </mat-tab>
+        <mat-tab label="Falsas alarmas">
+          <div class="example-large-box mat-elevation-z4">
+            Large content
+          </div>
+        </mat-tab>
+        <mat-tab label="Pendientes">
+          <div class="example-large-box mat-elevation-z4">
+            Large content
+          </div>
+        </mat-tab>
+        <mat-tab label="Procedidos">
+          <div class="example-large-box mat-elevation-z4">
+            Large content
+          </div>
+        </mat-tab>
+        <mat-tab label="Cancelados">
+          <div class="example-large-box mat-elevation-z4">
+            Large content
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      </mat-card>
+    </div>
+    <div class="col-md-8" >
+      <mat-card class="cardAcciones" style="height: 600px;">
+        <h1>hola</h1>
+      </mat-card>
+    </div>
+  </div>
+</div>

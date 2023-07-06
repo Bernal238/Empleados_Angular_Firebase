@@ -1,0 +1,139 @@
+<div class="mat-dialog-title" style="background: red; margin-bottom: 30px">
+  <h3 mat-dialog-title class="titulo" style="color: white; margin-top: 0px; padding-left: 20px; font-size: 22px !important; text-align:center">
+      FOLIOS DE EMERGENCIA
+        <mat-icon class="mat-18">playlist_add</mat-icon>
+        <!-- <mat-icon [mat-dialog-close]="" aria-hidden="false"
+      style="text-align: end; float: right; color: white; vertical-align: text-top;">close</mat-icon> -->
+    </h3>
+</div>
+
+<div mat-dialog-content style="height: 440px;">
+  <form [formGroup]="formularioRegistroFolio" style="display: contents; align-items: center; justify-content: center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="fill" style="display: contents;">
+            <mat-label>Ingresa la fecha</mat-label>
+            <input matInput type="date" formControlName="fecha" autocomplete="off" required>
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <!-- <input matInput [matDatepicker]="picker" formControlName="fecha" (focus)="formatoFecha()" required>
+            <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle> -->
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field style="display: contents;">
+            <mat-label>Folio 911</mat-label>
+            <input matInput type="number" class="matInput" placeholder="Ingresa folio de 911" formControlName="folio_911" min="1" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field style="display: contents;">
+            <mat-label>Folio Estación</mat-label>
+            <input matInput type="number" class="matInput" placeholder="Ingresa folio de estación" formControlName="folio_estacion" min="1" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Calle</mat-label>
+              <input matInput type="text" class="matInput" placeholder="Ingresa la calle" formControlName="calle" autocomplete="off" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Número</mat-label>
+              <input matInput type="text" class="matInput" placeholder="Ingresa el numeral" formControlName="numeral" autocomplete="off" required>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Cruce</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Ingresa el cruce" formControlName="cruce" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Colonia</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Ingresa la colonia" formControlName="colonia" mautocomplete="off" required/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Reportante</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Ingresa el nombre del reportante" formControlName="reportante" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Telefono</mat-label>
+            <input matInput type="number" class="matInput" placeholder="Ingresa el telefono" formControlName="telefono" mautocomplete="off" required/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field style="display: contents;">
+            <mat-label>Unidad</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Unidad que atiende" formControlName="id_unidad" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field style="display: contents;">
+            <mat-label>Tipo Servicio</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Unidad que atiende" formControlName="tipo_servicio" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field style="display: contents;">
+            <mat-label>Estación</mat-label>
+            <input matInput type="text" class="matInput" placeholder="Unidad que atiende" formControlName="id_estacion" autocomplete="off" required/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Km. Inicial</mat-label>
+            <input matInput type="number" class="matInput" placeholder="Ingresa el kilometraje inicial" formControlName="km_inicial" mautocomplete="off" required/>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Km. Final</mat-label>
+            <input matInput type="number" class="matInput" placeholder="Ingresa el kilometraje final" formControlName="km_final" mautocomplete="off" required/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div> -->
+  </form>
+</div>
+
+<div class="footer" mat-dialog-actions align="end" style="margin-right: 30px;">
+  <button mat-flat-button mat-dialog-close>CANCELAR</button>
+  <button mat-flat-button color="warn" [disabled]="formularioRegistroFolio.invalid">
+  <!-- <button mat-flat-button color="warn" style="width: 100%;" [disabled]="formularioConmustible.invalid" (click)="guardarRegistro()"> -->
+    GUARDAR
+  </button>
+
+</div>

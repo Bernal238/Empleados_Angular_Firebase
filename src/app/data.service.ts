@@ -10,12 +10,12 @@ export class DataServices{
     }
 
     guardarEmpleados(empleados:Empleado[]){
-        console.log(empleados);        
+        console.log(empleados);
         this.hhtpClient.post("https://empleados-fa92c-default-rtdb.firebaseio.com/datos.json", empleados).subscribe(
             response=>
                 this.snackBarService.openSnackBar("Se registro el usuario con exito", "Ok"),
             error=>
-                this.snackBarService.openSnackBar("Hubo un error al registrar el usuario. Error: " + error + ". Intenta nuevamente", "Ok"),            
+                this.snackBarService.openSnackBar("Hubo un error al registrar el usuario. Error: " + error + ". Intenta nuevamente", "Ok"),
         );
     }
 

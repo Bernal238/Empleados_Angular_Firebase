@@ -1,0 +1,64 @@
+
+  <div class="mat-dialog-title" style="background: red; margin-bottom: 30px;">
+      <!-- <mat-icon [mat-dialog-close]="" aria-hidden="false" aria-label="Example home icon" style="text-align: end; float: right; color: white; margin-top: 18px;">close
+      </mat-icon> -->
+      <h3 mat-dialog-title class="titulo" style="margin-top: 0px; padding-left: 20px;">
+        REGISTRO DE UNIDAD
+        <mat-icon class="mat-18">playlist_add</mat-icon>
+      </h3>
+  </div>
+
+<div class="mat-dialog-content" style="height: 240px">
+  <form [formGroup]="formularioUnidades" style="display: contents; align-items:center; justify-content: center;">
+    <div class="container">
+      <mat-form-field appearance="fill" style="display: contents;">
+        <mat-label>Ingrese el NIV</mat-label>
+        <input matInput name="niv" class="matInput" placeholder="Ingrese el NIV" formControlName="niv" autocomplete="off" required>
+      </mat-form-field>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Nombre unidad</mat-label>
+            <input matInput name="unidad" class="matInput" placeholder="Ingrese el nombre de unidad" formControlName="nombre_unidad" autocomplete="off" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Tipo Unidad</mat-label>
+            <mat-select name="tipo_unidad" formControlName="tipo_unidad" required>
+              <mat-option *ngFor="let unidad of arregloTipoUnidad" [value]="unidad.id_tipo_unidad">{{unidad.tipo_unidad}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Placas</mat-label>
+            <input matInput name="placas" class="matInput" placeholder="Ingrese el numero de placas" formControlName="placas" autocomplete="off" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field style="display: contents;">
+            <mat-label>Tipo Combustible</mat-label>
+            <mat-select name="tipo_combustible" formControlName="tipo_combustible" required>
+              <mat-option *ngFor="let combustible of arregloTipoCombustible" [value]="combustible.id_tipo_combustible">{{combustible.nombre_combustible}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="footer" mat-dialog-actions align="end" style="margin-right: 30px;">
+  <button mat-flat-button mat-dialog-close="">CANCELAR</button>
+  <!-- <button mat-flat-button color="warn" style="width: 100%;" [disabled]="formularioConmustible.invalid" (click)="guardarRegistro()"> -->
+  <button mat-flat-button color="warn" [disabled]="formularioUnidades.invalid" (click)="verDatos()">
+    GUARDAR
+  </button>
+</div>
